@@ -16,3 +16,39 @@
 2026-03-09 14:35:05.229222 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
 2026-03-09 14:35:05.229222 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:48:15.735354 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:48:15.735354 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:48:15.736355 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+2026-03-09 14:49:37.659982 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 14:49:37.660984 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:49:37.660984 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
+2026-03-09 14:50:05.367467 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 14:50:05.368468 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+2026-03-09 14:50:05.369470 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:50:24.766104 | my_max | Socratic | How can you track the largest value while looping?
+2026-03-09 14:50:24.766104 | my_max | Review | Ensure you update the maximum value when a larger element appears.
+2026-03-09 14:50:24.767105 | my_max | Example | Example: my_max([1,5,2]) should return 5.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:51:35.791282 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 14:51:35.803282 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+2026-03-09 14:51:35.804283 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:55:48.137210 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:55:48.138211 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+2026-03-09 14:55:48.139213 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 15:04:04.080552 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 15:04:04.081552 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+2026-03-09 15:04:04.082552 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 15:04:18.752556 | reverse_words | Socratic | How could you reverse the order of words?
+2026-03-09 15:04:18.753559 | reverse_words | Review | Check how you split and recombine words when reversing the sentence.
+2026-03-09 15:04:18.754557 | reverse_words | Example | Example: reverse_words('hello world') should return 'world hello'.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 15:12:09.143836 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 15:12:09.144835 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+2026-03-09 15:12:09.145070 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
+----------------------------------------------------------------------------------------------------------------------------------------------------------

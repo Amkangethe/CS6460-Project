@@ -5,6 +5,7 @@ import shutil
 from review import generate_code_review
 from socratic import generate_socratic_hint
 from logger import log_event
+from example import worked_example
 
 def use_student_attempt(task):
 
@@ -13,35 +14,60 @@ def use_student_attempt(task):
 
     shutil.copy(source, target)
 
-def run_tests():
+def run_tests(task):
+
+    test_file = f"tests/test_{task}.py"
+
     result = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q"],
+        [sys.executable, "-m", "pytest", test_file, "-q"],
         capture_output=True,
         text=True
     )
+
     return result.stdout
 
 
-def main():
 
+
+def main():
+    print("\n------------------------------------")
+    print("GenAI Programming Feedback Prototype\n")
+
+    valid_tasks = [
+    "count_vowels",
+    "dedupe",
+    "fizzbuzz",
+    "is_palindrome",
+    "letter_grade",
+    "my_max",
+    "reverse_words",
+    "running_sum"
+    ]
+    
     # Replace correct solution with student attempt
     print("Available tasks:")
-    print("count_vowels")
-    print("dedupe")
-    print("fizzbuzz")
-    print("is_palindrome")
-    print("letter_grade")
-    print("my_max")
-    print("reverse_words")
-    print("running_sum")
+    for t in valid_tasks:
+        print(f"{t}")
+    print(f"\n")
 
-    
+  
+    inputValid = False
+    task = ""
 
-    task = input("Enter task name: ")
+    while inputValid == False:
+   
+        task = input("Enter task name: ")
+
+        if task not in valid_tasks:
+            print("Invalid task. Try Again\n")
+        else:
+            inputValid = True
+
     use_student_attempt(task)
 
-    output = run_tests()
+    output = run_tests(task)
 
+    print("Running automated feedback pipeline...")
     print("\nTest Results:\n")
     print(output)
 
@@ -59,7 +85,9 @@ def main():
         log_event(task, "Review", review)
 
         print("\nStage 3: Worked Example")
-        print("Example: count_vowels('HELLO') should return 2.")
+        example = worked_example(task)
+        print(example)
+        log_event(task, "Example", example)
 
     else:
         print("\nAll tests passed!")
