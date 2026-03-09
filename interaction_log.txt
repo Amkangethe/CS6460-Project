@@ -110,3 +110,37 @@ Convert the string to lowercase using s.lower() before checking vowels.
 
 2026-03-09 16:29:28.564954 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 16:36:06.853032 | my_max | Socratic | Okay, let's start by thinking about what the `assert` statement is *really* telling us.  It’s not just about comparing numbers; it’s about whether the *result* of the expression matches the expected value.
+
+Think about what `my_max` *should* return when you give it the list of negative numbers.  What's the *intended* outcome of the function?
+
+2026-03-09 16:36:06.853032 | my_max | Review | 
+Issue:
+The function initializes the maximum value as 0.
+
+Why this matters:
+Lists containing only negative numbers will return an incorrect result.
+
+Suggestion:
+Initialize the maximum using the first element of the list.
+
+2026-03-09 16:36:06.853032 | my_max | Example | Example: my_max([1,5,2]) should return 5.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 16:39:19.931797 | my_max | Socratic | Okay, let’s break down why your code failed and how to approach debugging it.
+
+The test is failing because the `assert` statement is expecting the result of `my_max([-5, -2, -10])` to be `-2`, but it returns `0`.
+
+Think about the purpose of the `assert` statement – it’s a way to verify that your code is behaving as expected under certain conditions.  It’s not meant to be a full program, but rather a quick check.  The assertion itself is easily fooled, so we need to confirm that the return value is *actually* `-2`.
+
+Let's focus on *why* `0` is returned, rather than just checking if `0` is equal to `-2`.
+2026-03-09 16:39:23.285605 | my_max | Review | Okay, let's start with a deeper understanding of what `my_max` is supposed to do.
+
+Could you tell me, in your own words, what the purpose of this function is?
+2026-03-09 16:39:57.116865 | my_max | Socratic | Okay, let's focus on *why* the assertion fails.  Instead of just looking at the code, let’s think about what the assertion *should* be verifying.  
+
+Can you explain to me, in your own words, what the `assert` statement is *supposed* to be doing?
+2026-03-09 16:40:00.681999 | my_max | Review | Okay, let’s dive a bit deeper into what the code is doing.
+
+Think about what `my_max` *is* designed to do. It’s supposed to find the maximum value in a list of numbers. What’s the purpose of the `assert` statement?
+
+

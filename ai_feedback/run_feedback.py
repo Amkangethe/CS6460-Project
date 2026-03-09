@@ -80,12 +80,12 @@ def main():
         log_event(task, "Socratic", hint)
         
         print("\nStage 2: Code Review")
-        review = generate_code_review(task)
+        review = generate_code_review(task, output)
         print(review)
         log_event(task, "Review", review)
 
         print("\nStage 3: Worked Example")
-        example = worked_example(task)
+        example = worked_example(task, output)
         print(example)
         log_event(task, "Example", example)
 

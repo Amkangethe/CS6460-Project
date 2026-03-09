@@ -3,18 +3,18 @@ import requests
 def generate_socratic_hint(task, test_output):
 
     prompt = f"""
-You are a programming tutor.
+    You are a programming tutor.
 
-A beginner student wrote code for the task: {task}.
+    A beginner student wrote code for the task: {task}.
 
-Their unit tests failed with this output:
+    Their unit tests failed with this output:
 
-{test_output}
+    {test_output}
 
-Give a short Socratic hint that helps them think about the mistake.
-Do NOT give the solution.
-Ask a guiding question instead.
-"""
+    Give a short Socratic hint that helps them think about the mistake.
+    Do NOT give the solution.
+    Ask a guiding question instead.
+    """
 
     try:
         response = requests.post(
