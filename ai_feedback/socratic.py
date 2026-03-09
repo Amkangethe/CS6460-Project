@@ -1,14 +1,38 @@
-def generate_socratic_hint(task_name):
+import requests
 
-    hints = {
-        "count_vowels": "Which characters should be counted as vowels?",
-        "dedupe": "How could you track values you've already seen?",
-        "fizzbuzz": "What conditions should trigger Fizz, Buzz, or both?",
-        "is_palindrome": "How might you compare a string to its reverse?",
-        "letter_grade": "What score ranges correspond to each grade?",
-        "my_max": "How can you track the largest value while looping?",
-        "reverse_words": "How could you reverse the order of words?",
-        "running_sum": "How would you keep track of a cumulative total?"
-    }
+def generate_socratic_hint(task, test_output):
 
-    return hints.get(task_name, "Think about the core logic of the function.")
+    prompt = f"""
+You are a programming tutor.
+
+A beginner student wrote code for the task: {task}.
+
+Their unit tests failed with this output:
+
+{test_output}
+
+Give a short Socratic hint that helps them think about the mistake.
+Do NOT give the solution.
+Ask a guiding question instead.
+"""
+
+    try:
+        response = requests.post(
+            "http://localhost:11434/api/generate",
+            json={
+                "model": "gemma3:1b",
+                "prompt": prompt,
+                "stream": False
+            }
+        )
+
+        data = response.json()
+
+        # safer extraction
+        if "response" in data:
+            return data["response"]
+        else:
+            return f"(LLM returned unexpected format): {data}"
+
+    except Exception as e:
+        return f"(Socratic hint failed): {str(e)}"

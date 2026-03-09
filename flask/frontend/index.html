@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GenAI Programming Tutor</title>
+</head>
+
+<body>
+
+<h2>Programming Feedback Prototype</h2>
+
+<select id="task">
+<option>count_vowels</option>
+<option>dedupe</option>
+<option>fizzbuzz</option>
+<option>is_palindrome</option>
+<option>letter_grade</option>
+<option>my_max</option>
+<option>reverse_words</option>
+<option>running_sum</option>
+</select>
+
+<button onclick="runTask()">Run Task</button>
+
+<pre id="output"></pre>
+
+<script>
+
+async function runTask() {
+
+    const task = document.getElementById("task").value;
+
+    const response = await fetch("http://127.0.0.1:5000/run_task", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({task: task})
+    });
+
+    const data = await response.json();
+
+    document.getElementById("output").textContent = data.output;
+}
+
+</script>
+
+</body>
+</html>

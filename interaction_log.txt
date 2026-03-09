@@ -52,3 +52,61 @@
 2026-03-09 15:12:09.144835 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
 2026-03-09 15:12:09.145070 | fizzbuzz | Example | Example: fizzbuzz(5) should return ['1','2','Fizz','4','Buzz']
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 15:37:32.869424 | count_vowels | Socratic | Which characters should be counted as vowels? Does your function handle uppercase letters?
+2026-03-09 15:37:32.870422 | count_vowels | Review | 
+Issue:
+Your function checks only lowercase vowels.
+
+Why this matters:
+The test cases include uppercase characters.
+
+Suggestion:
+Convert the string to lowercase using s.lower() before checking vowels.
+
+2026-03-09 15:37:32.871423 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 16:27:12.887049 | count_vowels | Socratic | (LLM returned unexpected format): {'error': "model 'llama3' not found"}
+2026-03-09 16:27:12.998443 | count_vowels | Review | 
+Issue:
+Your function checks only lowercase vowels.
+
+Why this matters:
+The test cases include uppercase characters.
+
+Suggestion:
+Convert the string to lowercase using s.lower() before checking vowels.
+
+2026-03-09 16:27:12.999444 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 16:29:02.011296 | count_vowels | Socratic | Okay, let's dig a little deeper into what’s going on here.
+
+Imagine you're building a house. You have a blueprint – a set of instructions – but you don’t necessarily know exactly how each step will turn out.  
+
+The test is checking if your instructions (the code) are exactly right.  What’s the *most important* thing to focus on *right now* to figure out why the test is failing?
+2026-03-09 16:29:02.012809 | count_vowels | Review | 
+Issue:
+Your function checks only lowercase vowels.
+
+Why this matters:
+The test cases include uppercase characters.
+
+Suggestion:
+Convert the string to lowercase using s.lower() before checking vowels.
+
+2026-03-09 16:29:02.013808 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 16:29:28.561953 | count_vowels | Socratic | Okay, let's figure out why your code failed.  Instead of just looking at the error message, let's ask ourselves *why* the assertion is failing. 
+
+Think about what the code *should* be doing.  What's the basic goal of the `count_vowels` function?
+2026-03-09 16:29:28.563953 | count_vowels | Review | 
+Issue:
+Your function checks only lowercase vowels.
+
+Why this matters:
+The test cases include uppercase characters.
+
+Suggestion:
+Convert the string to lowercase using s.lower() before checking vowels.
+
+2026-03-09 16:29:28.564954 | count_vowels | Example | Example: count_vowels('HELLO') should return 2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------

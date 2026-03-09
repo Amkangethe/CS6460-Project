@@ -75,7 +75,7 @@ def main():
     if "failed" in output.lower():
 
         print("\nStage 1: Socratic Hint")
-        hint = generate_socratic_hint(task)
+        hint = generate_socratic_hint(task, output)
         print(hint)
         log_event(task, "Socratic", hint)
         
