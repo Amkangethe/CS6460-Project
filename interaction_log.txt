@@ -1,0 +1,18 @@
+2026-03-09 14:13:35.681859 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:13:35.682864 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:17:30.638782 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:17:30.639782 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:19:14.658223 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:19:14.659223 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:19:32.606486 | count_vowels | Socratic | Which characters should be counted as vowels?
+2026-03-09 14:19:32.606486 | count_vowels | Review | Your function checks vowels using 'aeiou'. Consider whether uppercase letters should also be counted.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:34:47.844720 | my_max | Socratic | How can you track the largest value while looping?
+2026-03-09 14:34:47.845721 | my_max | Review | Ensure you update the maximum value when a larger element appears.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-09 14:35:05.229222 | fizzbuzz | Socratic | What conditions should trigger Fizz, Buzz, or both?
+2026-03-09 14:35:05.229222 | fizzbuzz | Review | Check the conditions for numbers divisible by both 3 and 5 before checking individual cases.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
