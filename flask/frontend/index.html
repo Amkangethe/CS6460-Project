@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>GenAI Programming Tutor</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI Feedback Prototype</title>
 
+  <link rel="stylesheet" href="./styles/index.css">
+
+</head>
 <body>
 
-<h2>Programming Feedback Prototype</h2>
+    <div class="header" >
+        <p class="title">AI Programming Feedback Tutor</p>
+        <p class="sub-title">Receive layerd feedback to improve your programming skills.</p>
 
-<select id="task">
-<option>count_vowels</option>
-<option>dedupe</option>
-<option>fizzbuzz</option>
-<option>is_palindrome</option>
-<option>letter_grade</option>
-<option>my_max</option>
-<option>reverse_words</option>
-<option>running_sum</option>
-</select>
+    </div>
 
-<button onclick="runTask()">Run Task</button>
 
-<pre id="output"></pre>
+    <div class="selected-task-container">
+        <p class="selected-task">Selected Task</p>
+        <p class="task-question">What tasks are you debugging today?</p>
+        <div
+        style=" display: flex; justify-content: space-between;">
+            <select class="task-drop-down" id="task">
+            <option value="count_vowels">count_vowels</option>
+            <option value="dedupe">dedupe</option>
+            <option value="fizzbuzz">fizzbuzz</option>
+            <option value="is_palindrome">is_palindrome</option>
+            <option value="letter_grade">letter_grade</option>
+            <option value="my_max">my_max</option>
+            <option value="reverse_words">reverse_words</option>
+            <option value="running_sum">running_sum</option>
+        </select>
 
-<script>
+        <button class="run-feedback-button" id="runBtn">Run Feedback</button>
+        </div>
 
-async function runTask() {
+        <label for="codeFile" >
+            <div class="dropbox">
+                <p > <span 
+                    style="font-size: 20px;">
+                    Drop your Python file here or click to upload</span></p>
+                <p><span 
+                    style="font-size: 15px;
+                    color: rgb(87, 86, 86);
+                    margin: 0; padding: 0;">
+                    .py files only</span></p>
+            </div>
+        </label>
+        <input   type="file" id="codeFile" accept=".py" hidden>
 
-    const task = document.getElementById("task").value;
+        <div class="task-container">
+            <p class="task" id="taskName">
+                Task: count_vowels
+            </p>
+            <p class="concepts" id="taskConcepts">
+                Concept: strings, loops, conditionals
+            </p>
+             <p class="descriptions" id="taskDescriptions">
+                Count how many vowels appear in a given string.
+            </p>
+        </div>
 
-    const response = await fetch("http://127.0.0.1:5000/run_task", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({task: task})
-    });
+        <div class="socratic-hint-container" id="js-socratic-hint-container"></div>
+        <div class="review-container" id="js-review-container"></div>
+        <div class="example-container" id="js-example-container"></div>
+    </div>
+  <pre id="output"></pre>
 
-    const data = await response.json();
-
-    document.getElementById("output").textContent = data.output;
-}
-
-</script>
-
+  <script src="scripts/task.js"></script>
+  <script type="module" src="scripts/socratic.js"></script>
 </body>
 </html>

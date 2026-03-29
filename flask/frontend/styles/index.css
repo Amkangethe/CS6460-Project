@@ -1,0 +1,238 @@
+.header
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    
+
+
+
+}.title
+{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+}
+
+.sub-title
+{
+    font-size: 18px;
+    margin: 10px 0;
+    color: rgb(97, 97, 97);
+}
+
+.selected-task-container
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    border: 1px lightgrey solid;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.selected-task
+{
+    
+    font-weight: 700;
+    font-size: 23px;
+    background-color: lightgrey;
+    padding: 15px 15px;
+    margin: 0px;
+    border-bottom: 1px lightgrey solid;
+    box-shadow: 0 2px 8px rgba(51, 51, 51, 0.521);
+}
+
+.task-question
+{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 15px;
+    margin: 0px;
+}
+
+.task-drop-down
+{
+    margin: 0 15px;
+    width: 300px;
+    padding: 10px 10px;
+    font-family: Arial;
+    font-size: 15px;
+
+}
+
+.run-feedback-button
+{
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-family: Arial;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(113, 153, 167);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.run-feedback-button:hover
+{
+    background-color: rgba(113, 153, 167, 0.753);
+}
+
+
+.dropbox
+{
+    background-color: rgba(0, 0, 0, 0.192);
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    margin: 15px 15px;
+    border: 5px rgba(43, 42, 42, 0.253) dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropbox:hover
+{
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.task-container
+{
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 15px;
+    background-color: rgba(202, 148, 31, 0.151);
+}
+
+.task, .socratic, .review
+{
+    
+    font-weight: 700;
+    font-size: 23px;
+    background-color: rgba(202, 148, 31, 0.137);
+    padding: 15px 15px;
+    margin: 0;
+    border-bottom: 1px lightgrey solid;
+    box-shadow: 0 2px 8px rgba(51, 51, 51, 0.521);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.concepts, .descriptions
+{
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+
+
+.socratic-hint-container
+{
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 15px;
+    background-color: rgba(31, 202, 88, 0.151);
+    
+
+}
+
+.code-review-question
+{
+    padding: 20px 15px 0;
+    font-size: 16px;
+    margin: 0;
+    color: rgb(48, 48, 48);
+
+}
+
+.code-review-button
+{
+    margin: 15px 15px;
+    padding: 10px 15px;
+    font-family: Arial;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(113, 153, 167);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.code-review-button:hover
+{
+    background-color: rgba(113, 153, 167, 0.753);
+}
+
+.review-container
+{
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 15px;
+    background-color: rgba(31, 111, 202, 0.151);
+    padding: 0px;
+
+}
+
+.worked-example
+{
+    padding: 15px 0 15px 15px;
+    margin: 0;
+    font-size: 18px;
+
+}
+
+.worked-example-question
+{
+    padding: 20px 0 0 0;
+    font-size: 16px;
+    margin: 0;
+    color: rgb(48, 48, 48);
+}
+
+.worked-example-button
+{
+    margin: 0;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-family: Arial;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(65, 12, 165);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.worked-example-button:hover
+{
+    background-color: rgba(66, 12, 165, 0.349);
+}
+
+.example-container
+{
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 15px;
+    background-color: rgba(245, 13, 13, 0.151);
+    padding: 0px;
+
+}

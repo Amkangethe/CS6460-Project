@@ -144,3 +144,34 @@ Can you explain to me, in your own words, what the `assert` statement is *suppos
 Think about what `my_max` *is* designed to do. It’s supposed to find the maximum value in a list of numbers. What’s the purpose of the `assert` statement?
 
 
+2026-03-23 11:52:48.808548 | my_max | Socratic | Okay, let's start with a fundamental question.
+
+Imagine youâ€™re building a system where you have a value, and you want to make sure that value *always* returns a specific result.  Whatâ€™s the main idea behind unit testing in this context?
+2026-03-23 11:53:01.454177 | my_max | Review | Okay, let's dive deeper into *why* the assertion is failing.
+
+The test is checking if `my_max([-5, -2, -10])` returns `-2`.  The assertion `assert 0 == -2` is checking if the result of calling `my_max([-5, -2, -10])` is equal to `0`.
+
+The issue is that the function `my_max` is designed to return the *maximum* of the given numbers.  The assertion is checking if the return value is *equal to zero*, which is not the maximum.  
+
+To correctly test this, we need to make sure `my_max` returns the maximum value from the list.
+
+Let's double-check the function definition. Can you see the code for `my_max`?
+2026-03-23 11:53:17.999384 | my_max | Example | Example: my_max([1,5,2]) should return 5.
+
+AI Explanation:
+Okay, let's break down why the example `my_max([1, 5, 2])` is correct and what the student should learn from it.
+
+**The Example's Logic**
+
+The example `my_max([1, 5, 2])` is correct because the function `my_max` is designed to return the maximum value among a set of numbers.  In this case, the maximum value is 5.
+
+**The Core Idea**
+
+The student's code is simply comparing the result of `my_max([-5, -2, -10])` to -2.  The student should understand that the `assert` statement checks if the result of the expression is equal to the expected value.  If they are, the test passes; otherwise, it fails.
+
+**Comparison**
+
+The student should compare their code to the *concept* of finding the maximum of a list of numbers.  The `my_max` function is focused on this specific task â€“ determining which value is the largest.  It's not about simple arithmetic or comparisons; it's about identifying the top value.
+
+Let me know if you'd like a quick refresher on the specific syntax of the `assert` statement!
+------------------------------------------------------------------------------------------------------------------------------------------------------

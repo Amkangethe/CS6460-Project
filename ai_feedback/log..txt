@@ -1,0 +1,46 @@
+2026-03-23 09:17:54.635212 | my_max | Socratic | Okay, let’s start by understanding what `my_max` is supposed to do.  It takes a list of numbers and returns the largest number in that list.  
+
+Could you please explain to me what the `my_max` function is designed to achieve?
+2026-03-23 09:18:09.778573 | my_max | Review | Okay, let's break down what's happening in this error and how to improve your code.
+
+The assertion is failing because the `my_max` function is expected to return `-2` when given the input `[-5, -2, -10]`.  However, the function returns `0` when given that input. 
+
+**The core issue is that your `assert` statement is checking for `0` instead of `-2`**
+
+To clarify, the `assert` statement is checking if the value of `my_max([-5, -2, -10])` is equal to `-2`.  It's a simple equality test, and it's failing because the function returns `0` in this case. 
+
+Let's try to understand why this is happening.  Could you please examine the code you've written within the `my_max` function to see how it's calculating the result?  Knowing what `my_max` *actually* does will help us pinpoint the problem.
+2026-03-23 09:19:35.108055 | my_max | Socratic | Okay, let's start with a bit of understanding. 
+
+The test is checking if the function `my_max` returns `-2` when given the list `[-5, -2, -10]`. 
+
+Can you tell me, what does the `assert` statement *actually* try to do?  What is the purpose of this check?
+2026-03-23 09:19:46.675191 | my_max | Review | Okay, let's break down why your code failed and how to approach this.
+
+The test is designed to check if the function `my_max` correctly handles negative numbers.  Your code produces the exact expected output of `-2`, which is a correct result. However, the test is failing because it's asserting a value that *isn't* the expected result – it’s checking if `-2` equals `0`.  
+
+The test is designed to verify the expected outcome, but it's checking a value that doesn't match the result of the function call. 
+
+Essentially, your code is behaving correctly and returning the expected result, but the test isn't telling us *why* it's correct.  We need to understand the goal of the test and how the function `my_max` is supposed to behave in this specific scenario.
+2026-03-23 09:19:46.675724 | my_max | Example | Example: my_max([1,5,2]) should return 5.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-03-23 09:20:49.171224 | running_sum | Socratic | Okay, here's a short Socratic hint to guide the student towards understanding the error:
+
+"Let’s take a closer look at the `assert` statements within each test.  The `assert` statement is designed to verify if a condition is true. In this case, it’s checking if the list returned by `running_sum` is equal to the expected list.  The error message `At index 0 diff: 5 != 1` tells us the difference between the expected and actual values at a specific index.  It suggests there's something unexpected when the list is being computed.  
+
+Could you think about *why* the difference is 5, and how that might be causing the test to fail, even though the values appear correct within the list itself?"
+2026-03-23 09:21:03.918539 | running_sum | Review | Okay, let's break down what's going wrong and how to approach this.
+
+**The Problem:**
+
+The code is expecting a list of numbers, and it's currently calculating the sum of the numbers in the list, but it's not doing it correctly.  The `assert` statements are failing because the output you're providing doesn't match the expected result.
+
+**The Key Insight:**
+
+The `running_sum` function is intended to calculate the sum of a list of numbers, but it's currently producing the wrong output.  The issue isn't a simple calculation error; it's a fundamental mistake in how the function is being used.
+
+**Guiding Question:**
+
+Instead of just checking if the output is the same as the expected output, we need to understand *why* the function is producing the wrong output.  What is the expected output in this case, and how does the function's logic deviate from that expected value?
+2026-03-23 09:21:03.919057 | running_sum | Example | Example: running_sum([1,2,3]) should return [1,3,6].
+----------------------------------------------------------------------------------------------------------------------------------------------------------

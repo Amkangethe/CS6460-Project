@@ -1,9 +1,8 @@
 def running_sum(nums: list[int]) -> list[int]:
-    result = []
-    total = 0
 
-    for num in nums:
-        total += num
-        result.append(total)
+    result = []
+
+    for i in range(len(nums)):
+        result.append(nums[i] + nums[i-1])
 
     return result
