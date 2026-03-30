@@ -16,59 +16,103 @@
 
     </div>
 
+    <div style="
+        display: flex;
+        justify-content:space-around;
+    
+        ">
+        <div class="selected-task-container">
+            <p class="selected-task">Selected Task</p>
+            <p class="task-question">What tasks are you debugging today?</p>
+            <div
+            style=" display: flex; justify-content: space-between;">
+                <select class="task-drop-down" id="task">
+                <option value="count_vowels">count_vowels</option>
+                <option value="dedupe">dedupe</option>
+                <option value="fizzbuzz">fizzbuzz</option>
+                <option value="is_palindrome">is_palindrome</option>
+                <option value="letter_grade">letter_grade</option>
+                <option value="my_max">my_max</option>
+                <option value="reverse_words">reverse_words</option>
+                <option value="running_sum">running_sum</option>
+            </select>
 
-    <div class="selected-task-container">
-        <p class="selected-task">Selected Task</p>
-        <p class="task-question">What tasks are you debugging today?</p>
-        <div
-        style=" display: flex; justify-content: space-between;">
-            <select class="task-drop-down" id="task">
-            <option value="count_vowels">count_vowels</option>
-            <option value="dedupe">dedupe</option>
-            <option value="fizzbuzz">fizzbuzz</option>
-            <option value="is_palindrome">is_palindrome</option>
-            <option value="letter_grade">letter_grade</option>
-            <option value="my_max">my_max</option>
-            <option value="reverse_words">reverse_words</option>
-            <option value="running_sum">running_sum</option>
-        </select>
-
-        <button class="run-feedback-button" id="runBtn">Run Feedback</button>
-        </div>
-
-        <label for="codeFile" >
-            <div class="dropbox">
-                <p > <span 
-                    style="font-size: 20px;">
-                    Drop your Python file here or click to upload</span></p>
-                <p><span 
-                    style="font-size: 15px;
-                    color: rgb(87, 86, 86);
-                    margin: 0; padding: 0;">
-                    .py files only</span></p>
+            <button class="run-feedback-button" id="runBtn">Run Feedback</button>
             </div>
-        </label>
-        <input   type="file" id="codeFile" accept=".py" hidden>
 
-        <div class="task-container">
-            <p class="task" id="taskName">
-                Task: count_vowels
-            </p>
-            <p class="concepts" id="taskConcepts">
-                Concept: strings, loops, conditionals
-            </p>
-             <p class="descriptions" id="taskDescriptions">
-                Count how many vowels appear in a given string.
-            </p>
+            <label for="codeFile" >
+                <div class="dropbox" id="js-dropbox">
+                    <p > <span 
+                        style="font-size: 20px;">
+                        Drop your Python file here or click to upload</span></p>
+                    <p><span 
+                        style="font-size: 15px;
+                        color: rgb(87, 86, 86);
+                        margin: 0; padding: 0;">
+                        .py files only</span></p>
+                </div>
+            </label>
+            <input   type="file" id="codeFile" accept=".py" hidden>
+
+            <div class="task-container">
+                <p class="task" id="taskName">
+                    Task: count_vowels
+                </p>
+                <p class="concepts" id="taskConcepts">
+                    Concept: strings, loops, conditionals
+                </p>
+                <p class="descriptions" id="taskDescriptions">
+                    Count how many vowels appear in a given string.
+                </p>
+            </div>
+
+            <div class="socratic-hint-container" id="js-socratic-hint-container"></div>
+            <div class="review-container" id="js-review-container"></div>
+            <div class="example-container" id="js-example-container"></div>
         </div>
 
-        <div class="socratic-hint-container" id="js-socratic-hint-container"></div>
-        <div class="review-container" id="js-review-container"></div>
-        <div class="example-container" id="js-example-container"></div>
+        <div class="student-view-container">
+            <div class="student-view">
+                Student Code
+            </div>
+
+        </div>
     </div>
   <pre id="output"></pre>
 
   <script src="scripts/task.js"></script>
   <script type="module" src="scripts/socratic.js"></script>
+  <script>
+    const fileInput = document.getElementById("codeFile");
+
+    fileInput.addEventListener("change", function(event) {
+        // Access the FileList object
+        const files = event.target.files;
+       
+
+        if (files && files.length > 0) {
+            console.log("Files uploaded:");
+
+            // Loop through the files if multiple files are selected
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                console.log("Filename: " + file.name);
+                let dropboxHTML = `
+                    <p> <span 
+                        style="font-size: 20px;">
+                        Filename: ${file.name}</span>
+                    </p>
+                `;
+
+                const dropbox = document.getElementById("js-dropbox");
+                dropbox.innerHTML = dropboxHTML;
+                // You can perform additional validation or processing here
+            }
+        } else {
+            console.log("No file selected.");
+        }
+    });
+    
+  </script>
 </body>
 </html>
